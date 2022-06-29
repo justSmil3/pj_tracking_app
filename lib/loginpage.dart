@@ -2,13 +2,13 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:pj_app/Colors.dart';
-import 'package:pj_app/auth_service.dart';
-import 'package:pj_app/forgot_password.dart';
-import 'package:pj_app/functions.dart';
-import 'package:pj_app/mainapp.dart';
+import 'package:pj_tracking_app/Colors.dart';
+import 'package:pj_tracking_app/auth_service.dart';
+import 'package:pj_tracking_app/forgot_password.dart';
+import 'package:pj_tracking_app/functions.dart';
+import 'package:pj_tracking_app/mainapp.dart';
 import 'package:http/http.dart' as http;
-import 'package:pj_app/urls.dart';
+import 'package:pj_tracking_app/urls.dart';
 
 var authInfo;
 

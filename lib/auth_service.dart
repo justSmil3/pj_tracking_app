@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:math';
-import 'package:pj_app/urls.dart';
+import 'package:pj_tracking_app/urls.dart';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;

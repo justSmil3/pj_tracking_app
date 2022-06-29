@@ -16,12 +16,12 @@ class TaskWeight {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-          (other is TaskWeight &&
-              runtimeType == other.runtimeType &&
-              id == other.id &&
-              weight == other.weight &&
-              task == other.task &&
-              user == other.user);
+      (other is TaskWeight &&
+          runtimeType == other.runtimeType &&
+          id == other.id &&
+          weight == other.weight &&
+          task == other.task &&
+          user == other.user);
 
   @override
   int get hashCode =>

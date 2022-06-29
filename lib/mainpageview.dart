@@ -3,12 +3,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:pj_app/MentiAppBar.dart';
-import 'package:pj_app/functions.dart';
-import 'package:pj_app/mainpage.dart';
-import 'package:pj_app/providers.dart';
-import 'package:pj_app/statspage.dart';
-import 'package:pj_app/urls.dart';
+import 'package:pj_tracking_app/MentiAppBar.dart';
+import 'package:pj_tracking_app/functions.dart';
+import 'package:pj_tracking_app/mainpage.dart';
+import 'package:pj_tracking_app/providers.dart';
+import 'package:pj_tracking_app/statspage.dart';
+import 'package:pj_tracking_app/urls.dart';
 import 'package:provider/provider.dart';
 
 import 'auth_service.dart';

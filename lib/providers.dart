@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:pj_app/functions.dart';
-import 'package:pj_app/subtask.dart';
-import 'package:pj_app/task.dart';
-import 'package:pj_app/track.dart';
+import 'package:pj_tracking_app/functions.dart';
+import 'package:pj_tracking_app/subtask.dart';
+import 'package:pj_tracking_app/task.dart';
+import 'package:pj_tracking_app/track.dart';
 import 'package:provider/provider.dart';
 
 class TaskProvider with ChangeNotifier, DiagnosticableTreeMixin {

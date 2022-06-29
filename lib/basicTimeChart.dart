@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:pj_app/stat.dart';
+import 'package:pj_tracking_app/stat.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 class BasicTimeChart extends StatelessWidget {
   final List<Stat> data;
   final String title;
-  BasicTimeChart({Key? key, required this.data, required this.title}) : super(key: key);
+  BasicTimeChart({Key? key, required this.data, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +15,7 @@ class BasicTimeChart extends StatelessWidget {
           id: "developers",
           data: data,
           domainFn: (Stat stat, _) => DateTime.parse(stat.date),
-          measureFn: (Stat stat, _) => stat.score
-      )
+          measureFn: (Stat stat, _) => stat.score)
     ];
 
     return IgnorePointer(
@@ -32,8 +32,7 @@ class BasicTimeChart extends StatelessWidget {
                 innerPadding: 18,
               ),
             ],
-          )
-      ),
+          )),
     );
   }
 }

@@ -3,15 +3,15 @@ import 'dart:typed_data';
 
 import 'package:flutter/rendering.dart';
 import 'package:http/http.dart' as http;
-import 'package:pj_app/Colors.dart';
-import 'package:pj_app/MentiAppBar.dart';
+import 'package:pj_tracking_app/Colors.dart';
+import 'package:pj_tracking_app/MentiAppBar.dart';
 import 'package:flutter/material.dart';
-import 'package:pj_app/Message.dart';
-import 'package:pj_app/functions.dart';
-import 'package:pj_app/urls.dart';
+import 'package:pj_tracking_app/Message.dart';
+import 'package:pj_tracking_app/functions.dart';
+import 'package:pj_tracking_app/urls.dart';
 
 import 'package:encrypt/encrypt.dart' as enc;
-import 'package:pj_app/variables.dart';
+import 'package:pj_tracking_app/variables.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({Key? key, required this.otherId, this.bMentor = false})

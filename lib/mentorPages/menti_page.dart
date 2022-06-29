@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:pj_app/chatpage.dart';
-import 'package:pj_app/mentorPages/menti.dart';
+import 'package:pj_tracking_app/chatpage.dart';
+import 'package:pj_tracking_app/mentorPages/menti.dart';
 
-import 'package:pj_app/mentorPages/menti_weight_page.dart';
-import 'package:pj_app/mentorPages/menti_stats_page.dart';
-import 'package:pj_app/mentorPages/menti_chat_page.dart';
-import 'package:pj_app/mentorPages/task_weight_history.dart';
-import 'package:pj_app/providers.dart';
+import 'package:pj_tracking_app/mentorPages/menti_weight_page.dart';
+import 'package:pj_tracking_app/mentorPages/menti_stats_page.dart';
+import 'package:pj_tracking_app/mentorPages/menti_chat_page.dart';
+import 'package:pj_tracking_app/mentorPages/task_weight_history.dart';
+import 'package:pj_tracking_app/providers.dart';
 import 'package:provider/provider.dart';
-import 'package:pj_app/statspage.dart';
-import 'package:pj_app/subtask.dart';
-import 'package:pj_app/trackpage.dart';
+import 'package:pj_tracking_app/statspage.dart';
+import 'package:pj_tracking_app/subtask.dart';
+import 'package:pj_tracking_app/trackpage.dart';
 import 'package:http/http.dart' as http;
-import 'package:pj_app/mentorPages/task_weight_popup.dart';
-import 'package:pj_app/variables.dart';
+import 'package:pj_tracking_app/mentorPages/task_weight_popup.dart';
+import 'package:pj_tracking_app/variables.dart';
 
 class MentiPage extends StatefulWidget {
   const MentiPage({Key? key, required this.user}) : super(key: key);

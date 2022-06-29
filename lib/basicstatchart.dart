@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
-import 'package:pj_app/stat.dart';
+import 'package:pj_tracking_app/stat.dart';
 
 class BasicStatChart extends StatelessWidget {
   final List<Stat> data;
-
 
   BasicStatChart({required this.data});
   @override
@@ -14,8 +13,7 @@ class BasicStatChart extends StatelessWidget {
           id: "developers",
           data: data,
           domainFn: (Stat stat, _) => stat.date,
-          measureFn: (Stat stat, _) => stat.score
-      )
+          measureFn: (Stat stat, _) => stat.score)
     ];
 
     return Container(
@@ -36,5 +34,4 @@ class BasicStatChart extends StatelessWidget {
       ),
     );
   }
-
 }

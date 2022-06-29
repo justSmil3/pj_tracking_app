@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pj_app/stat.dart';
-import 'package:pj_app/track.dart';
-import 'package:pj_app/auth_service.dart';
-import 'package:pj_app/functions.dart';
+import 'package:pj_tracking_app/stat.dart';
+import 'package:pj_tracking_app/track.dart';
+import 'package:pj_tracking_app/auth_service.dart';
+import 'package:pj_tracking_app/functions.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
 class DualUserTimeChart extends StatefulWidget {

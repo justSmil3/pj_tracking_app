@@ -1,18 +1,18 @@
 import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
-import 'package:pj_app/Colors.dart';
-import 'package:pj_app/basicBarChart.dart';
-import 'package:pj_app/basicTimeChart.dart';
-import 'package:pj_app/basic_pie_chart.dart';
-import 'package:pj_app/dualTimeChart.dart';
-import 'package:pj_app/functions.dart';
-import 'package:pj_app/stat.dart';
-import 'package:pj_app/subtask.dart';
-import 'package:pj_app/task.dart';
-import 'package:pj_app/variables.dart';
+import 'package:pj_tracking_app/Colors.dart';
+import 'package:pj_tracking_app/basicBarChart.dart';
+import 'package:pj_tracking_app/basicTimeChart.dart';
+import 'package:pj_tracking_app/basic_pie_chart.dart';
+import 'package:pj_tracking_app/dualTimeChart.dart';
+import 'package:pj_tracking_app/functions.dart';
+import 'package:pj_tracking_app/stat.dart';
+import 'package:pj_tracking_app/subtask.dart';
+import 'package:pj_tracking_app/task.dart';
+import 'package:pj_tracking_app/variables.dart';
 import 'package:provider/provider.dart';
-import 'package:pj_app/providers.dart';
+import 'package:pj_tracking_app/providers.dart';
 
 class StatsPage extends StatefulWidget {
   final http.Client client;

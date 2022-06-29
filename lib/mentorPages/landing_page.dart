@@ -1,13 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:pj_app/Colors.dart';
-import 'package:pj_app/basicBarChart.dart';
-import 'package:pj_app/basic_pie_chart.dart';
-import 'package:pj_app/mentorPages/menti.dart';
-import 'package:pj_app/functions.dart';
-import 'package:pj_app/providers.dart';
-import 'package:pj_app/stat.dart';
+import 'package:pj_tracking_app/Colors.dart';
+import 'package:pj_tracking_app/basicBarChart.dart';
+import 'package:pj_tracking_app/basic_pie_chart.dart';
+import 'package:pj_tracking_app/mentorPages/menti.dart';
+import 'package:pj_tracking_app/functions.dart';
+import 'package:pj_tracking_app/providers.dart';
+import 'package:pj_tracking_app/stat.dart';
 import 'package:provider/provider.dart';
 
 class statobject {

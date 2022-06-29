@@ -5,15 +5,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-import 'package:pj_app/functions.dart';
-import 'package:pj_app/auth_service.dart';
-import 'package:pj_app/providers.dart';
+import 'package:pj_tracking_app/functions.dart';
+import 'package:pj_tracking_app/auth_service.dart';
+import 'package:pj_tracking_app/providers.dart';
 import 'package:provider/provider.dart';
-import 'package:pj_app/track.dart';
-import 'package:pj_app/urls.dart';
+import 'package:pj_tracking_app/track.dart';
+import 'package:pj_tracking_app/urls.dart';
 import 'package:collection/collection.dart';
-import 'package:pj_app/subtask.dart';
-import 'package:pj_app/TaskWeight.dart';
+import 'package:pj_tracking_app/subtask.dart';
+import 'package:pj_tracking_app/TaskWeight.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class TaskWeightPopup extends StatefulWidget {

@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pj_app/functions.dart';
-import 'package:pj_app/paswordRecoverCodePopup.dart';
+import 'package:pj_tracking_app/functions.dart';
+import 'package:pj_tracking_app/paswordRecoverCodePopup.dart';
 import 'dart:math';
-import 'package:pj_app/auth_service.dart';
+import 'package:pj_tracking_app/auth_service.dart';
 
 class ForgotPasswordPopup extends StatefulWidget {
   @override

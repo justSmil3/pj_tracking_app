@@ -1,4 +1,4 @@
-class TextMessage{
+class TextMessage {
   int user;
   int creator;
   String Message;

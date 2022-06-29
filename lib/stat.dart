@@ -1,4 +1,4 @@
-class Stat{
+class Stat {
   int id;
   String date;
   int score;

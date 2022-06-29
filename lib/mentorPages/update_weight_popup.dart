@@ -3,14 +3,15 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pj_app/TaskWeight.dart';
-import 'package:pj_app/subtask.dart';
-import 'package:pj_app/urls.dart';
-import 'package:pj_app/auth_service.dart';
+import 'package:pj_tracking_app/TaskWeight.dart';
+import 'package:pj_tracking_app/subtask.dart';
+import 'package:pj_tracking_app/urls.dart';
+import 'package:pj_tracking_app/auth_service.dart';
 import 'package:http/http.dart' as http;
 
 class UpdateWeightPopup extends StatefulWidget {
-  const UpdateWeightPopup({Key? key, required this.weight, required this.task}) : super(key: key);
+  const UpdateWeightPopup({Key? key, required this.weight, required this.task})
+      : super(key: key);
   final TaskWeight weight;
   final Subtask task;
 
@@ -19,7 +20,6 @@ class UpdateWeightPopup extends StatefulWidget {
 }
 
 class _UpdateWeightPopupState extends State<UpdateWeightPopup> {
-
   final Map<String, String> dropOptions = {
     "0": "Keine Priorität",
     "1": "Nidrige Priorität",
@@ -33,10 +33,10 @@ class _UpdateWeightPopupState extends State<UpdateWeightPopup> {
   String dropdownValue = "Keine Priorität";
 
   @override
-  void initState(){
+  void initState() {
     UserId = widget.weight.user;
     weightController.text = widget.weight.weight.toString();
-    setState((){});
+    setState(() {});
   }
 
   @override
@@ -71,11 +71,12 @@ class _UpdateWeightPopupState extends State<UpdateWeightPopup> {
             onChanged: (String? newValue) {
               setState(() {
                 dropdownValue = newValue!;
-                _color = newValue == "Keine Priorität" ?
-                Colors.grey : Colors.blue;
+                _color =
+                    newValue == "Keine Priorität" ? Colors.grey : Colors.blue;
               });
             },
-            items: dropOptions.values.toList()
+            items: dropOptions.values
+                .toList()
                 .map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem<String>(
                 value: value,
@@ -87,57 +88,52 @@ class _UpdateWeightPopupState extends State<UpdateWeightPopup> {
       ),
       actions: <Widget>[
         Center(
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          child:
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+            TextButton(
+              onPressed: () {
+                getToken().then((x) => http.Client().delete(
+                    DeleteWeightsUrl(widget.weight.id),
+                    headers: {HttpHeaders.authorizationHeader: x}));
 
-              children: [
-
-                TextButton(
-                  onPressed: (){
-                    getToken().then((x) => http.Client().delete(
-                        DeleteWeightsUrl(widget.weight.id), headers: {HttpHeaders.authorizationHeader: x}));
-
-                    Navigator.of(context).pop();
-                    Navigator.of(context).pop();
-                  },
-                  child: const Text(
-                    "Delete",
-                    style: TextStyle(
-                      color: Colors.red,
-                    ),
-                  ),
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
+              },
+              child: const Text(
+                "Delete",
+                style: TextStyle(
+                  color: Colors.red,
                 ),
-                TextButton(
-                  style: TextButton.styleFrom(
-                    primary: _color,
-                  ),
-                  onPressed: () {
-                    if (dropdownValue == "Keine Priorität") {
-                      return;
-                    }
-                    getToken().then((x){
-                      final Map<String, String> headers = {
-                        "Content-Type" : "application/json",
-                        HttpHeaders.authorizationHeader: x};
-                      final Map<String, String> body = {
-                        "weight": dropOptions.keys.firstWhere((
-                                    x) => dropOptions[x] == dropdownValue),
-                        "task": widget.task.id.toString(),
-                        "user": UserId.toString()
-                      };
-                      http.Client().put(
-                          updateWeightUrl(widget.weight.id),
-                          headers: headers,
-                          body: json.encode(body)
-                      );
-                    });
-                    Navigator.of(context).pop();
-                    Navigator.of(context).pop();
-                  },
-                  child: Text("Save"),
-                ),
-              ]
-          ),
+              ),
+            ),
+            TextButton(
+              style: TextButton.styleFrom(
+                primary: _color,
+              ),
+              onPressed: () {
+                if (dropdownValue == "Keine Priorität") {
+                  return;
+                }
+                getToken().then((x) {
+                  final Map<String, String> headers = {
+                    "Content-Type": "application/json",
+                    HttpHeaders.authorizationHeader: x
+                  };
+                  final Map<String, String> body = {
+                    "weight": dropOptions.keys
+                        .firstWhere((x) => dropOptions[x] == dropdownValue),
+                    "task": widget.task.id.toString(),
+                    "user": UserId.toString()
+                  };
+                  http.Client().put(updateWeightUrl(widget.weight.id),
+                      headers: headers, body: json.encode(body));
+                });
+                Navigator.of(context).pop();
+                Navigator.of(context).pop();
+              },
+              child: Text("Save"),
+            ),
+          ]),
         ),
       ],
     );

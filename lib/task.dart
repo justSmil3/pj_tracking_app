@@ -1,4 +1,4 @@
-class Task{
+class Task {
   int id;
   String name;
   String description;

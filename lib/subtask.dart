@@ -6,7 +6,7 @@ class Subtask {
   String name;
   String description;
   int scoreadd;
-  String classes;
+  int classes;
 
 //<editor-fold desc="Data Methods">
 
@@ -57,7 +57,7 @@ class Subtask {
     String? name,
     String? description,
     int? scoreadd,
-    String? classes,
+    int? classes,
   }) {
     return Subtask(
       id: id ?? this.id,
@@ -87,7 +87,7 @@ class Subtask {
       name: map['name'] as String,
       description: map['description'] as String,
       scoreadd: map['scoreadd'] as int,
-      classes: map['classes'] as String,
+      classes: map['classes'] as int,
     );
   }
 

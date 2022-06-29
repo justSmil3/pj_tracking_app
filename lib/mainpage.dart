@@ -6,26 +6,26 @@ import 'package:http/http.dart' as http;
 
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:pj_app/Colors.dart';
-import 'package:pj_app/basic_pie_chart.dart';
-import 'package:pj_app/providers.dart';
-import 'package:pj_app/stat.dart';
-import 'package:pj_app/subtask.dart';
-import 'package:pj_app/TaskWeight.dart';
-import 'package:pj_app/variables.dart';
+import 'package:pj_tracking_app/Colors.dart';
+import 'package:pj_tracking_app/basic_pie_chart.dart';
+import 'package:pj_tracking_app/providers.dart';
+import 'package:pj_tracking_app/stat.dart';
+import 'package:pj_tracking_app/subtask.dart';
+import 'package:pj_tracking_app/TaskWeight.dart';
+import 'package:pj_tracking_app/variables.dart';
 import 'task.dart';
-import 'package:pj_app/urls.dart';
-import 'package:pj_app/trackpage.dart';
+import 'package:pj_tracking_app/urls.dart';
+import 'package:pj_tracking_app/trackpage.dart';
 import 'dart:convert';
-import 'package:pj_app/functions.dart';
-import 'package:pj_app/trackpopup.dart';
-import 'package:pj_app/auth_service.dart';
-import 'package:pj_app/basicstatchart.dart';
-import 'package:pj_app/track.dart';
-import 'package:pj_app/MentiAppBar.dart';
+import 'package:pj_tracking_app/functions.dart';
+import 'package:pj_tracking_app/trackpopup.dart';
+import 'package:pj_tracking_app/auth_service.dart';
+import 'package:pj_tracking_app/basicstatchart.dart';
+import 'package:pj_tracking_app/track.dart';
+import 'package:pj_tracking_app/MentiAppBar.dart';
 import 'package:provider/provider.dart';
 
-import 'package:pj_app/auth_service.dart';
+import 'package:pj_tracking_app/auth_service.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key, required this.controller, required this.secondCon})

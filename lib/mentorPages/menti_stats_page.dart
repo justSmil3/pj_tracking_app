@@ -1,9 +1,9 @@
 // import 'package:flutter/material.dart';
-// import 'package:pj_app/basicBarChart.dart';
-// import 'package:pj_app/basicTimeChart.dart';
-// import 'package:pj_app/functions.dart';
-// import 'package:pj_app/mentorPages/dual_time_chart.dart';
-// import 'package:pj_app/stat.dart';
+// import 'package:pj_tracking_app/basicBarChart.dart';
+// import 'package:pj_tracking_app/basicTimeChart.dart';
+// import 'package:pj_tracking_app/functions.dart';
+// import 'package:pj_tracking_app/mentorPages/dual_time_chart.dart';
+// import 'package:pj_tracking_app/stat.dart';
 
 // class MentiStatsPage extends StatefulWidget {
 //   const MentiStatsPage(
